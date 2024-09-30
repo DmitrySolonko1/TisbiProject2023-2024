@@ -1,0 +1,41 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %} Page about Jinja {% endblock %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'main/css/about.css' %}">
+{% endblock %}
+
+{% block body %}
+<h1>Some info about us from Jinja</h1>
+<div class="card_container_name">
+    <div class="card" style="width: 18rem;">
+        <img src="{% static 'main/img/sunrise.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="{% static 'main/img/sunrise.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="{% static 'main/img/sunrise.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

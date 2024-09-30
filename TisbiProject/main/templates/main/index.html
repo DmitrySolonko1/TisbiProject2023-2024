@@ -1,0 +1,14 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %} Page index Jinja {% endblock %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'main/css/index.css' %}">
+{% endblock %}
+
+{% block body %}
+<h1>Hello world from index Jinja</h1>
+
+<img src="{% static 'main/img/sunrise.jpg' %}" alt="">
+{% endblock %}

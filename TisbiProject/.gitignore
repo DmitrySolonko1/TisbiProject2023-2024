@@ -1,0 +1,10 @@
+**/.idea
+**/__pycache__
+**/.vscode
+../venv
+env
+*.xml
+
+
+db.sqlite3
+
