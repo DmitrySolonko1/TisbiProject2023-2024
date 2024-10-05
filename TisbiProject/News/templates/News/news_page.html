@@ -1,0 +1,24 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %} Page about Jinja {% endblock %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'main/css/about.css' %}">
+{% endblock %}
+
+{% block body %}
+<h1>Some info about us from Jinja</h1>
+<div class="card_container_name">
+    {% for item in news %}
+    <div class="card" style="width: 18rem;">
+        <img src="{% static 'main/img/sunrise.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{item.title}}</h5>
+            <p class="card-text">{{item.content}}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

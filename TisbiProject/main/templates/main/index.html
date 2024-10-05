@@ -1,7 +1,7 @@
 {% extends 'main/layout.html' %}
 {% load static %}
 
-{% block title %} Page index Jinja {% endblock %}
+{% block title %} {{ title }} {% endblock %}
 
 {% block links %}
 <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
@@ -9,6 +9,13 @@
 
 {% block body %}
 <h1>Hello world from index Jinja</h1>
-
+<h1> {{ title }} </h1>
+{% for el in values %}
+{% if el == 'wOrLd' %}
+{% filter lower %}
+<p>{{ el }}</p>
+{% endfilter %}
+{% endif %}
+{% endfor %}
 <img src="{% static 'main/img/sunrise.jpg' %}" alt="">
 {% endblock %}

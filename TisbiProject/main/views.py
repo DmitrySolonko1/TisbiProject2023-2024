@@ -4,7 +4,11 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return render(request, 'main/index.html')
+    context = {
+        "title": "Main index page",
+        "values": ["hello", "wOrLd", "123"]
+    }
+    return render(request, 'main/index.html', context)
 
 
 def about(request):
