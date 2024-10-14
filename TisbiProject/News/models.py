@@ -18,7 +18,8 @@ class News(models.Model):
     content = models.TextField(verbose_name='Контент')
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория')
     date_publishing = models.DateField(auto_now=False, auto_now_add=True)
-    author = models.CharField(max_length=255, verbose_name='Автор')
+    author = models.CharField(max_length=244, verbose_name='Автор')
+    is_published = models.BooleanField(default=False, verbose_name='Опубликована')
 
     def __str__(self):
         return self.title
