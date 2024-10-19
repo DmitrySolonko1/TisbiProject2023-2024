@@ -1,0 +1,23 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %} {{article.title}} {% endblock %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'main/css/about.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="card_container_name">
+    <div class="card" style="width: 18rem;">
+        <img src="{% static 'main/img/sunrise.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{article.title}}</h5>
+            <p class="card-text">{{article.content}}</p>
+            <p class="card-text">{{article.author}}</p>
+            <a href="{% url 'news_update_page' article.id %}" class="btn btn-success">Изменить</a>
+            <a href="{% url 'news_delete_page' article.id %}" class="btn btn-danger">Удалить</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
